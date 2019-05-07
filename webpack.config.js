@@ -17,7 +17,7 @@ function loadOutput(environment) {
 function loadPlugins(environment) {
 
     let wasmPackArgs = '--no-typescript';
-    if (environment.production) extraArgs += ' --release';
+    if (environment.production) wasmPackArgs += ' --release';
 
     return [
         new HtmlWebpackPlugin({
